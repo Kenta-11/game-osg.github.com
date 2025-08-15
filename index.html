@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Game Outsuide Game</title>
+<style>
+body{font-family:system-ui,Segoe UI,Inter,Arial,Helvetica,sans-serif;padding:20px;max-width:720px;margin:auto;background:#0b0f14;color:#e7eaf0;line-height:1.6}
+h1{font-size:1.4rem;margin:0 0 12px}
+.card{background:#121822;border:1px solid #1e2633;border-radius:12px;padding:16px;margin:14px 0}
+.title{font-weight:700;margin-bottom:6px}
+input{width:100%;padding:14px 16px;font-size:18px;border-radius:10px;border:1px solid #2a3445;background:#0f1520;color:#e7eaf0}
+button{width:100%;padding:12px 16px;font-size:16px;border-radius:10px;border:0;background:#2f80ed;color:white;margin-top:10px}
+.ok{color:#48e768;font-weight:700}
+.bad{color:#ff6b6b;font-weight:700}
+.hint{opacity:.9;margin-top:6px}
+img.level-img{width:100%;border-radius:8px;margin-top:10px}
+</style>
+</head>
+<body>
+<h1>Game Outsuide Game</h1>
+<p>ป้อนรหัสถูกแล้วกด “ตรวจคำตอบ” เพื่อไปด่านถัดไป</p>
+<div id="app">กำลังโหลดเกม…</div>
+
+<script>
+let gameData, cur = 0;
+let bgmAudio = null;
+
+// ฟังก์ชันเล่นเสียงแบบวน พร้อมเว้น 2 วิหลังจบ
+function playSound(src, loop = false, delayMs = 2000) {
+  if (!src) return null;
+  const audio = new Audio(src);
+  if (loop) {
+    audio.addEventListener('ended', () => {
+      setTimeout(() => {
+        audio.currentTime = 0;
+        audio.play();
+      }, delayMs);
+    });
+  }
+  audio.play();
+  return audio;
+}
+
+function stopSound(audio) {
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+}
+
+// โหลด JSON
+fetch('games.json')
+  .then(res => res.json())
+  .then(data => {
+    gameData = data;
+    render();
+  })
+  .catch(err => {
+    document.getElementById('app').innerHTML = "<p>❌ โหลดข้อมูลเกมไม่สำเร็จ</p>";
+    console.error(err);
+  });
+
+// ฟังก์ชันแสดงด่าน
+function render(){
+  if(cur >= gameData.levels.length){
+    document.getElementById('app').innerHTML = `
+      <div class="card">
+        <div class="title">🎉 เคลียร์ครบทุกด่าน!</div>
+        <p class="ok">คุณปลดล็อกทุกปริศนาแล้ว</p>
+      </div>`;
+    playSound(gameData.global_sounds.reward);
+    return;
+  }
+
+  const L = gameData.levels[cur];
+
+  // หยุดเสียงเดิม
+  stopSound(bgmAudio);
+
+  // เล่นเสียงด่านนี้ถ้ามี
+  if (L.files?.level_sound) {
+    bgmAudio = playSound(L.files.level_sound, true, 2000); // loop + delay 2 วิ
+  }
+
+  let imgs = "";
+  if(L.images){
+    imgs = L.images.map(url=>`<img src="${url}" class="level-img">`).join("");
+  }
+
+  document.getElementById('app').innerHTML = `
+    <div class="card">
+      <div class="title">ด่านที่ ${cur+1}: ${L.name}</div>
+      <p><strong>โจทย์:</strong> <code>${L.prompt}</code></p>
+      <input id="ans" placeholder="พิมพ์รหัสที่นี่…">
+      <button onclick="check()">ตรวจคำตอบ</button>
+      <p class="hint">คำใบ้: ${L.hint}</p>
+      ${imgs}
+      <div id="msg"></div>
+    </div>
+  `;
+}
+
+// ฟังก์ชันตรวจคำตอบ
+function check(){
+  const v = document.getElementById('ans').value || "";
+  const L = gameData.levels[cur];
+  const msg = document.getElementById('msg');
+
+  const pattern = new RegExp(L.pattern, "i");
+  if(pattern.test(v)){
+    msg.innerHTML = '<p class="ok">ถูกต้อง! ไปด่านถัดไป ▶</p>';
+    playSound(gameData.global_sounds.correct);
+    cur++;
+    setTimeout(render, 600);
+  }else{
+    msg.innerHTML = '<p class="bad">ยังไม่ใช่ ลองใหม่หรือดูคำใบ้</p>';
+    playSound(gameData.global_sounds.wrong);
+  }
+}
+</script>
+</body>
+</html>

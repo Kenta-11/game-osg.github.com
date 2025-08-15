@@ -1,0 +1,105 @@
+{
+  "global_sounds": {
+    "correct": "sounds/correct.wav",
+    "wrong": "sounds/wrong.wav",
+    "reward": "sounds/reward.mp3"
+  },
+  "levels": [
+    {
+      "name": "ROT13 – Gunvynaq(room 1)",
+      "prompt": "Gunvynaq",
+      "hint": "ค้นคำว่า ROT13",
+      "pattern": "^Thailand$",
+      "files": { "level_sound": "" },
+      "images": ["images/rot13_1.jpg"]
+    },
+    {
+      "name": "Base64 – string(room 2)",
+      "prompt": "TmdhaSBKYWQ=",
+      "hint": "แปลง Base64",
+      "pattern": "^Ngai Jad$",
+      "files": { "level_sound": "" },
+      "images": ["images/Base64.png"]
+    },
+    {
+      "name": "room 3",
+      "prompt": "What's that sound?",
+      "hint": "มันเหมือนบล็อกเคอรี",
+      "pattern": "^YAWK-LAM-BOK$",
+      "files": { "level_sound": "sounds/MorseCode.wav" },
+      "images": ["images/Mores.jpg"]
+    },
+    {
+      "name": "room 4",
+      "prompt": "whfk fdbhu",
+      "hint": "shift 3 ตัวอักษร",
+      "pattern": "^OPHTUS$",
+      "files": { "level_sound": "" },
+      "images": ["images/4.png"]
+    },
+    {
+      "name": "room 5",
+      "prompt": "มีเพียง computer ถึงจะอ่านแสงสีฟ้า หลัง Layer 4",
+      "hint": "รูปภาพ ก็บอกอยู่!!!",
+      "pattern": "^Bok Leaw Game KodEasy$",
+      "files": { "level_sound": "" },
+      "images": ["images/layer4.png"]
+    },
+    {
+      "name": "room 6",
+      "prompt": "Enter the password",
+      "hint": "รหัส!!!",
+      "pattern": "^password$",
+      "files": { "level_sound": "" },
+      "images": [""]
+    },
+    {
+      "name": "Room 7",
+      "prompt": "(มันไม่ใช้password ห้องนี้)password is :hiddenkey",
+      "hint": "Steganography (https://www.edchart.com/free-online-converters/steganographic-decoder.php)",
+      "pattern": "^CANuW1N2411787497$",
+      "files": { "level_sound": "" },
+      "images": ["images/Steganography.png"]
+    },
+    {
+      "name": "Room8(แค่เพลง!)",
+      "prompt": "Michael Haydn can read this since 1808",
+      "hint": "Keyword: Michael Hayd,1808",
+      "pattern": "^HELLOWORLDFROMTECHCAST$",
+      "files": { "level_sound": "sounds/piano.mp3" },
+      "images": ["images/Sheet.png"]
+    },
+    {
+      "name": "Room9",
+      "prompt": "ylucet/DS/Huffman.html",
+      "hint": "Huffman Tree",
+      "pattern": "^ThE Em1nEncE 1n Shadow$",
+      "files": { "level_sound": "" },
+      "images": ["images/html.png"]
+    },
+    {
+      "name": "Room 10(Audio Puzzle)",
+      "prompt": "Wonderful,Highlighted,Outperforming,Is,Significant,Wisdom,Impress,Navigator",
+      "hint": "ตัวเล็กทั้งหมด",
+      "pattern": "^who is win$",
+      "files": { "level_sound": "sounds/report11.mp3" },
+      "images": ["images/who is win.png"]
+    },
+    {
+      "name": "Room 11(logic gate)",
+      "prompt": "ดูในinput.pefที่ส่งให้",
+      "hint": "good luck(ยากโคตร)",
+      "pattern": "^LogicGatelsEz$",
+      "files": { "level_sound": "" },
+      "images": ["images/logic-gate.Png","images/table-with-diagram.jpg"]
+    },
+    {
+      "name": "หมูเด้ง(Room 12)",
+      "prompt": "(ไม่มีช่องว่าง)(ให้เอาแค่6คำ แนวนอน(jถึง=))",
+      "hint": "เหมือนด่าน5 แค่หาร2",
+      "pattern": "MayBeYouAreDaWinnerNumber1",
+      "files": { "level_sound": "" },
+      "images": [""]
+    }
+  ]
+}
