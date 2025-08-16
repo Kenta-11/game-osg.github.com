@@ -2,6 +2,12 @@
 
 **Genre:** Puzzle / Alternate Reality Game (ARG) / Browser-based Challenge  
 **Platform:** Mobile & Desktop Web Browser (supports small screens)  
+**Status:** 🧪 **Beta Test – Pre-release** (For invited testers only)  
+
+---
+
+## 🎬 Intro
+> _[ยังไม่ได้คิด — เว้นไว้ให้ผู้พัฒนาเพิ่มภายหลัง]_
 
 ---
 
@@ -23,6 +29,11 @@ Each stage uses a combination of **text**, **images**, and **sounds** to hide cl
 
 ## 🎯 Objective
 Find the hidden password in each stage using **any resources available** — digital tools, research skills, or creative reasoning — and unlock the ultimate final challenge.
+
+---
+
+## 📖 How to Play
+> _[ยังไม่ได้คิดเหมือนกันนี้เป็น Beta test ไว้สำหรับคนที่ชวนมา ทดสอบ ร่วมกันเท่านั้น]_
 
 ---
 
@@ -55,7 +66,6 @@ Starts at **moderate** and builds up to **hard**, introducing more complex probl
 
 ## 📜 License
 This project is released under the [MIT License](LICENSE).
-
 ---
 inspiration by techcast 
 thank you techcast
