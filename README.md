@@ -1,22 +1,61 @@
-#about
-เกมนี้ถูกออกแบบมาให้ทุกคนเล่นได้ หมายความว่า "ถ้าเป็นคนสังเกตได้ ตั้งสมมติฐานเป็น คนหาข้อมูลจาก keyword ต่างๆเป็น สามารถเล่นได้แน่นอน" (this game design for everyone that have self-learning skill)
-This game is designed to challenge your observation, analytical thinking, and the ability to apply knowledge
-from various fields in a fun and interactive way. Players will have to engage both the logical and creative
-sides of their mind, making sense of clues hidden within text, images, sounds, and other elements of the
-game interface to gradually uncover the secrets behind each stage. Solving these puzzles may require logical
-deduction, interpreting meanings from context, using digital tools, or even researching external sources.
+# Game Outside Game
 
---------------------------------------------------------
+**Genre:** Puzzle / Alternate Reality Game (ARG) / Browser-based Challenge  
+**Platform:** Mobile & Desktop Web Browser (supports small screens)  
 
-Throughout the gameplay, you will encounter unexpected challenges. Sometimes the clues hide within
-seemingly irrelevant details; other times, they might appear in a form that must be decoded before they can
-be understood. One of the game’s unique features is the absence of a fixed path — players can experiment,
-explore, and use different problem-solving approaches, making each playthrough a unique experience. To
-reach the end, you will need persistence, creativity, and the ability to connect diverse pieces of information
-into a coherent solution.
+---
 
---------------------------------------------------------
+## 🎮 Overview
+*Game Outside Game* is an immersive browser-based puzzle experience that blends the virtual world with real-world knowledge and tools. Players will progress through unique challenges that require observation, decoding, research, and creativity.  
+Each stage uses a combination of **text**, **images**, and **sounds** to hide clues — some obvious, others deeply concealed — pushing players to think *outside the box*.  
 
-More than just entertainment, this game sharpens your skills in solving complex problems, thinking
-systematically, and collaborating effectively if played as a group. It also enhances your ability to search for,
-analyze, and process information from various media in today’s digital landscape.
+---
+
+## ✨ Features
+- 🧩 **Multi-stage puzzles** with increasing difficulty  
+- 🎵 **Interactive media**: images, sound effects, and optional background audio  
+- 💡 **Integrated hint system** to assist players  
+- 📱 **Mobile & Desktop support** (optimized for small screens)  
+- 🌐 Some puzzles require external tools or websites for solutions  
+- 📂 **JSON-based level design** for easy updates and expansion  
+
+---
+
+## 🎯 Objective
+Find the hidden password in each stage using **any resources available** — digital tools, research skills, or creative reasoning — and unlock the ultimate final challenge.
+
+---
+
+## 👥 Play Styles
+- **Solo Play** – Challenge yourself and test your problem-solving skills  
+- **Group Play** – Collaborate with friends to solve puzzles together  
+- **Replayable** – Try different solving strategies each time  
+
+---
+
+## 📈 Difficulty
+Starts at **moderate** and builds up to **hard**, introducing more complex problem-solving in later stages.
+
+---
+
+## 📦 Installation & Running
+1. Clone or download this repository  
+2. Place all files on a local server or hosting platform  
+3. Open `index.html` in your browser  
+4. Start playing!
+
+---
+
+## 🛠 Technology
+- HTML5 + CSS3 + JavaScript  
+- JSON configuration for levels and assets  
+- Works in any modern web browser
+
+---
+
+## 📜 License
+This project is released under the [MIT License](LICENSE).
+
+---
+inspiration by techcast 
+thank you techcast
