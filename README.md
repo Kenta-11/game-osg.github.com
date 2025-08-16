@@ -1,3 +1,6 @@
+<h1>How to play (Outside Game)<h1>
+จะทำอะไรก็ทำ เอารหัสมาให้ได้ก็พอ (JUST GET DA PASSWORD)
+เกมนี้ถูกออกแบบมาให้ทุกคนเล่นได้ หมายความว่า "ถ้าเป็นคนสังเกตได้ ตั้งสมมติฐานเป็น คนหาข้อมูลจาก keyword ต่างๆเป็น สามารถเล่นได้แน่นอน" (this game design for everyone that have self-learning skill)<h1>
 This game is designed to challenge your observation, analytical thinking, and the ability to apply knowledge
 from various fields in a fun and interactive way. Players will have to engage both the logical and creative
 sides of their mind, making sense of clues hidden within text, images, sounds, and other elements of the
